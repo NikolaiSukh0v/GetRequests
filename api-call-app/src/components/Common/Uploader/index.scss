@@ -1,0 +1,45 @@
+.inputUploader {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 300px;
+  height: 40px;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  &::before {
+    content: "Upload";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    cursor: pointer;
+    padding: 0 15px;
+    height: 100%;
+    font-size: 14px;
+  }
+
+  &::after {
+    content: "Upload your photo";
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    color: #888;
+    font-size: 14px;
+  }
+}
+.InputErrorMessage {
+        padding-top: 2px;
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    right: 4%;
+}
+.fileName {
+    position: absolute;
+}

@@ -1,0 +1,20 @@
+.Body {
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.BodyTitle {
+padding-top: 140px;
+width: 250px;
+}
+.buttonShowMore {
+    padding-top: 53px;
+}
+.BodyCards {
+    padding-top: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

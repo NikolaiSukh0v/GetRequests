@@ -1,0 +1,29 @@
+button {
+  all: unset; /* Resets all properties to their inherited or initial values */
+  box-sizing: border-box; /* Ensures consistent box model behavior */
+  cursor: pointer; /* Maintains a visual indicator for interactivity */
+  /* Add any additional base styles here, e.g., font, display */
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Important for accessibility: ensure focus styles are maintained or re-applied */
+button:focus-visible {
+  outline: 2px solid blue; /* Example focus indicator */
+  outline-offset: 2px;
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 34px;
+    border-radius: 25px;
+    background-color: #f4e040;
+    font-weight: 400;
+}
