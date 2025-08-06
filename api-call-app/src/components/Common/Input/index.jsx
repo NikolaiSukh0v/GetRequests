@@ -6,9 +6,8 @@ export default function Input({placeholder, validation, onChangeValue}){
   const formatPhoneNumber = (digits) => {
         const part1 = digits.slice(0, 3);
         const part2 = digits.slice(3, 6);
-        const part3 = digits.slice(6, 8);
-        const part4 = digits.slice(8, 10);
-        return `+380 (${part1}) ${part2} ${part3} ${part4}`.trim();
+        const part3 = digits.slice(6, 9);
+        return `+380${part1}${part2}${part3}`.trim();
     };
 
     const handlePhoneChange = (rawValue) => {

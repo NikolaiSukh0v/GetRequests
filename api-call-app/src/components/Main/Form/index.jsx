@@ -4,6 +4,7 @@ import Uploader from '../../Common/Uploader';
 import ButtonYellow from '../../Common/ButtonYellow';
 import CheckBoxes from '../../Common/CheckBoxes';
 import './index.scss'
+import axios from 'axios'
 import {useState, useEffect} from 'react'
 export default function Form() {
         const positions = [
@@ -22,7 +23,7 @@ export default function Form() {
     const [fileName, setFileName] = useState('');
 
 const handlePhotoChange = (file) => {
-        const maxFileSize = 5 * 1024 * 1024; // 5MB
+        const maxFileSize = 5 * 1024 * 1024; 
         const minWidth = 70;
         const minHeight = 70;
 
@@ -75,17 +76,33 @@ const handlePhotoChange = (file) => {
         }
 
     }
-    const postNewUser = ()=>{
-        const data ={
-            'name':name,
-            "mail":mail,
-            "phone":phone,
-            "position":position,
-            "avatar":photo
-        }
-        console.log(data, 'new user');
-        
+const postNewUser = async () => {
+    try {
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', mail);
+        formData.append('phone', phone);
+        formData.append('position_id', position);
+        formData.append('photo', photo); 
+
+        const token = localStorage.getItem('Token');
+
+        const response = await axios.post(
+            `${import.meta.env.VITE_HOST_URL}/users`,
+            formData,
+            {
+                headers: {
+                    Token: token,
+                    'Content-Type': 'multipart/form-data'
+                }
+            }
+        );
+
+        console.log(response.data, 'response');
+    } catch (error) {
+        console.error('POST request failed:', error.response?.data || error.message);
     }
+};
         const handleName = (val, e) =>{
         if(e===''){
         setName(val)
@@ -109,7 +126,12 @@ const handlePhotoChange = (file) => {
 
     }
         const radioButton = (val) =>{
-        setPosition(val)
+         const selectedPosition = positions.find(p => p.name === val);
+         console.log(selectedPosition);
+         
+        if (selectedPosition) {
+            setPosition(selectedPosition.id);
+        }
         console.log(val, 'name');
     }
 
