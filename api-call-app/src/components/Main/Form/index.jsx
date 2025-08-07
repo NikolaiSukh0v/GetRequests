@@ -6,7 +6,7 @@ import CheckBoxes from '../../Common/CheckBoxes';
 import './index.scss'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
-export default function Form() {
+export default function Form({isUpdate}) {
         const positions = [
         { id: 1, name: "Lawyer" },
         { id: 2, name: "Content manager" },
@@ -98,7 +98,10 @@ const postNewUser = async () => {
             }
         );
 
-        console.log(response.data, 'response');
+        if(response.status === 200 || 201){
+            const e = true
+            isUpdate(e)
+        }
     } catch (error) {
         console.error('POST request failed:', error.response?.data || error.message);
     }
