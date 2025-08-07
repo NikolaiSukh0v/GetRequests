@@ -1,4 +1,3 @@
-import React from 'react';
 import TopSection from './components/TopSection';
 import Main from './components/Main'
 function App() {

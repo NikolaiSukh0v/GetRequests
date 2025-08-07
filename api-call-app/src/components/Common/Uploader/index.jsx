@@ -1,4 +1,4 @@
-import './index.scss'
+import './UploaderStyles/index.scss'
 import { useRef } from 'react';
 export default function Uploader({ onChangeValue, error, fileName }) {
     const fileInputRef = useRef(null);

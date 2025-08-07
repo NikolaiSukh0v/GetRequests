@@ -1,4 +1,4 @@
-import './index.scss'
+import './TitleStyles/index.scss'
 export default function TextTitle({children}){
 return(
     <>

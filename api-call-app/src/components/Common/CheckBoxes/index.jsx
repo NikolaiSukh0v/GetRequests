@@ -1,4 +1,4 @@
-import './index.scss'
+import './CheckBoxStyles/index.scss'
 import useState from 'react'
 export default function CheckBoxes({name, getValue}){
     const handleChange= (e)=>{

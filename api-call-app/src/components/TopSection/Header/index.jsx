@@ -1,4 +1,4 @@
-import React from 'react';
+import {React} from 'react';
 import Logo from '../../Common/Logo'
 import './HeaderStyles/index.scss'
 import ButtonYellow from '../../Common/ButtonYellow';

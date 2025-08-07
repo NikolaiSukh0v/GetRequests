@@ -2,8 +2,8 @@ import TextTitle from '../Common/TextTitle/index'
 import CardBlock from './CardBlock/index'
 import Form from './Form'
 import { useState } from 'react'
-import ButtonYellow from '../Common/ButtonYellow/index'
-import './index.scss'
+import ButtonYellow from '../Common/ButtonYellow'
+import './MainStyles/index.scss'
 
 export default function Main() {
   const [showMore, setShowMore] = useState(6)

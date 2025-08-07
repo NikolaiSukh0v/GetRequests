@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import './index.scss'
+import './ErrorStyles/index.scss'
 export default function ErrorNotify({ message, onClose }){
  useEffect(() => {
     const handleEsc = (event) => {

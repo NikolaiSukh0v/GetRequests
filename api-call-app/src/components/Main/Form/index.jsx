@@ -4,7 +4,7 @@ import Uploader from '../../Common/Uploader';
 import ButtonYellow from '../../Common/ButtonYellow';
 import CheckBoxes from '../../Common/CheckBoxes';
 import ErrorNotify from '../../Common/ErrorNotify';
-import './index.scss'
+import './FormStyles/index.scss'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 export default function Form({isUpdate}) {
@@ -171,11 +171,13 @@ const postNewUser = async () => {
         <div className='radioButtonsWrapper'>
 
           <div className='FormRadioButtons'>
+            <div className='radioContainer'>
                       <h3 className='TitlePositionSelect'>Select your position</h3>
-    <CheckBoxes getValue={radioButton} name='Frontend developer'/>
-<CheckBoxes getValue={radioButton} name='Backend developer'/>
-<CheckBoxes getValue={radioButton} name='Designer'/>
-<CheckBoxes getValue={radioButton} name='QA'/>
+    <CheckBoxes className="checkBox" getValue={radioButton} name='Frontend developer'/>
+<CheckBoxes className="checkBox" getValue={radioButton} name='Backend developer'/>
+<CheckBoxes className="checkBox" getValue={radioButton} name='Designer'/>
+<CheckBoxes className="checkBox" getValue={radioButton} name='QA'/>
+</div>
           </div>
 
         </div>

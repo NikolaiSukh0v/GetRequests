@@ -1,4 +1,4 @@
-import './index.scss'
+import './InputStyles/index.scss'
 import {useState} from 'react'
 export default function Input({placeholder, validation, onChangeValue}){
     const [value, setValue] = useState('')

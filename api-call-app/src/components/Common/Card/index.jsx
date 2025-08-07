@@ -1,4 +1,4 @@
-import './index.scss'
+import './CardStyles/index.scss'
 export default function Card({ Avatar, userName, Specialization, Adress, Contacts }) {
   return (
     <div className="CardBody">

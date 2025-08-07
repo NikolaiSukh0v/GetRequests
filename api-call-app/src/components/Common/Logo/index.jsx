@@ -1,9 +1,9 @@
-import logo from'../../../static/Logo.svg';
-import './index.scss'
+import LogoImg  from'../../../static/LogoImg.svg';
+import './LogoStyles/index.scss'
 export default function Logo(){
     return (
         <div className="logo">
-            <img src={logo} alt="API Call App Logo" />
+            <img src={LogoImg} alt="API Call App Logo" />
         </div>
     );
 }

@@ -135,3 +135,24 @@ align-items: center;
         padding-top: 140px;
     }
 }
+@media(min-width:1030px){
+    .FormRadioButtons{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left:0px;
+    }
+
+}
+.radioContainer {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    width: 328px;
+}
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+
+}
