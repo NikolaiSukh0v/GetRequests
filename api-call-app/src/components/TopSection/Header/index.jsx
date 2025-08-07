@@ -5,7 +5,10 @@ import ButtonYellow from '../../Common/ButtonYellow';
 export default function Header(){
     return (
         <div className="header">
-            <Logo />
+            <div className='logo'>
+                          <Logo />
+            </div>
+  
             <div className="header-Buttons">
                 <ButtonYellow children='Users'/>
                 <ButtonYellow children='Sign up'/>

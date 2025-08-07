@@ -8,7 +8,30 @@
     
     gap: 15px;
 }
+.logo {
+    display: block;
+}
 .header-Buttons {
     display: flex;
     gap: 10px;
+}
+@media(min-width:768px){
+    .header {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    gap: 15px;
+
+}
+.header-Buttons {
+    display: flex;
+    gap: 10px;
+    padding-right: 30px;
+}.logo {
+    display: block;
+    padding-left: 15px;
+}
 }
