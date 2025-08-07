@@ -51,3 +51,38 @@ body {
   font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
 }
+@media(min-width:1920px){
+	.web-app{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		background-color: #f8f8f8;
+	}
+	.container{
+		position: relative;
+				display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 1170px;
+
+	}
+	.HeadlineSection {
+				width: 1170px;
+	}
+	.HeaderSection {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		left: 0;
+		background-color: white;
+	} .header{
+		width: 1170px !important;
+	}
+	.headerContainer{
+		width: 100%;
+	}
+}

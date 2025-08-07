@@ -7,8 +7,11 @@ function App() {
   return (
     <>
     <div className='web-app'>
+      <div className='container'>
     <TopSection/>
     <Main/>
+      </div>
+
     </div>
 
     </>
