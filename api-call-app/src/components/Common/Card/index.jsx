@@ -3,7 +3,7 @@ export default function Card({ Avatar, userName, Specialization, Adress, Contact
   return (
     <div className="CardBody">
       <div className="avatar">
-        <img src={Avatar} alt={userName} />
+        <img id='avatar' src={Avatar} alt={userName} />
                     <div className="userFullName">
         <span className='textSpan'>{userName}</span>
       </div>

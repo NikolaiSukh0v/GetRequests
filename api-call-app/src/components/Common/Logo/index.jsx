@@ -1,4 +1,5 @@
 import logo from'../../../static/Logo.svg';
+import './index.scss'
 export default function Logo(){
     return (
         <div className="logo">

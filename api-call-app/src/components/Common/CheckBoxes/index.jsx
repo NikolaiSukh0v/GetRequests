@@ -8,8 +8,11 @@ export default function CheckBoxes({name, getValue}){
     return(
         <>
         <div className="CheckBox">
+              <div class="radio">
+
              <input onChange={handleChange} type="radio" name="position" className="radioButton" id={name} value={name} />
-      <label htmlFor={name}>{name}</label>
+      <label htmlFor={name}class="radio-label">{name}</label>
+        </div>
         </div>
         </>
     )

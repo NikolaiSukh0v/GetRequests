@@ -30,6 +30,19 @@
     padding-bottom: 20px;
 }
 .uploaderWrapper {
-    padding-top: 40px;
-    padding-bottom: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 40px;
+}
+.ButtonWrapperForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 95px;
+}
+.radioButtonsWrapper {
+display: flex;
+flex-direction: column;
 }
