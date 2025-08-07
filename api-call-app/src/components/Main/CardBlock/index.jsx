@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../../Common/Card/index';
-
+import './index.scss'
 export default function CardBlock({show, update}) {
   const [token, setToken] = useState(null);
   const [users, setUsers] = useState([]);

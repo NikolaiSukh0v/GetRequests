@@ -12,9 +12,19 @@ width: 250px;
 .buttonShowMore {
     padding-top: 53px;
 }
+@media(max-width:757px){
 .BodyCards {
     padding-top: 48px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+}
+@media(min-width:758px){
+.BodyCards {
+    padding-top: 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 }

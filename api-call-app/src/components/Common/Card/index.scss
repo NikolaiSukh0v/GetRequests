@@ -1,4 +1,66 @@
-@media(max-width: 760px){
+@media(max-width: 767px){
+.CardBody{
+    display: flex;
+    flex-direction: column;
+justify-content: space-between;
+    align-items: center;
+width: 328px;
+height: 254px;
+background-color: white;
+border-radius: 15px;
+}
+#avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.avatar{
+    padding-top: 25px;
+     display: flex;
+    width: 100%;
+    justify-content: center;
+flex-direction: column;
+align-items: center;
+    
+}
+.userFullName{
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 20px;
+
+}
+.descriptionsWrapper {
+padding-bottom: 12px;
+    gap: 10px;
+   display: flex;
+        align-items: center;
+        width: 100%;
+        height: 78px;
+        flex-direction: column;
+}
+.Adress{
+    width: 328px;
+    display: block;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+.userSpecialization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.Specialization {
+    text-align: center;
+}
+.userAdress {
+       display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+}
+@media(min-width: 768px){
 .CardBody{
     display: flex;
     flex-direction: column;
