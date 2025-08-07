@@ -1,7 +1,9 @@
 import './index.scss'
-export default function Button({ onClick, children, isActive }) {
+import React from 'react';
+
+export default function Button({ onClick, children, isDisabled }) {
     return (
-        <button className="button" onClick={onClick}>
+        <button className={`button ${isDisabled ? 'disabled' : ''}`} onClick={onClick}>
             {children}
         </button>
     );

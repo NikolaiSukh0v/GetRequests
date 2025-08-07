@@ -33,3 +33,11 @@ padding-top: 140px;
 width: 550px;
 }
 }
+@media(min-width:1024px){
+    .BodyCards { 
+      grid-template-columns: 1fr 1fr 1fr;
+      padding-top: 50px;
+      gap: 20px;
+    }
+
+}

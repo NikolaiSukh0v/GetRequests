@@ -1,3 +1,6 @@
+.CardBody{
+    color: #000000DE;
+}
 @media(max-width: 767px){
 .CardBody{
     display: flex;
@@ -8,6 +11,7 @@ width: 328px;
 height: 254px;
 background-color: white;
 border-radius: 15px;
+
 }
 #avatar {
     width: 70px;
@@ -121,4 +125,11 @@ padding-bottom: 12px;
     justify-content: center;
     align-items: center; 
 }
+}
+@media(min-width:1024px){
+.CardBody{
+width:282px;
+height: 254px;
+}
+
 }

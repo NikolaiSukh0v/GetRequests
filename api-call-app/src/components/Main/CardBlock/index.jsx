@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from '../../Common/Card/index';
 import './index.scss'
-export default function CardBlock({show, update}) {
+export default function CardBlock({show, update, onPagesLoaded}) {
   const [token, setToken] = useState(null);
   const [users, setUsers] = useState([]);
 
@@ -30,6 +30,9 @@ export default function CardBlock({show, update}) {
           headers: { Token: token },
         })
         setUsers(response.data.users)
+                if (onPagesLoaded && typeof onPagesLoaded === 'function') {
+          onPagesLoaded(response.data.total_pages)
+        }
       } catch (error) {
         console.error('Error fetching users:', error)
       }

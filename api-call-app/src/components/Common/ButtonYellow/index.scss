@@ -27,3 +27,7 @@ button:focus-visible {
     background-color: #f4e040;
     font-weight: 400;
 }
+.button.disabled{
+background-color: #b4b4b4;
+color: white;
+}

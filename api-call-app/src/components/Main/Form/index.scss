@@ -4,8 +4,7 @@
 }
 .textTitle {
     padding-top: 140px;
-    width: 320px;
-    padding-left: 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,6 +22,9 @@
     color: #7E7E7E;
     padding-left: 10px;
 }
+.TitleContainer{
+    width: 300px;
+}
 .TitlePositionSelect {
     font-size: 16px;
     line-height: 26px;
@@ -36,6 +38,9 @@ justify-content: center;
 align-items: center;
 padding-top: 40px;
 }
+.radioButtonsWrapper {
+    align-items: flex-start;
+}
 .ButtonWrapperForm {
     display: flex;
     justify-content: center;
@@ -47,9 +52,21 @@ padding-top: 40px;
 display: flex;
 flex-direction: column;
 }
+.FormRadioButtons{
+    padding-left: 5%;
+}
 }
 
 @media(min-width:768px){
+    .FormRadioButtons {
+     width: 45%;
+    display: flex
+;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
+}
 .formWrapper {
    background-color: #f8f8f8;
 }
@@ -93,12 +110,28 @@ padding-top: 40px;
     align-items: center;
     padding-top: 50px;
     padding-bottom: 95px;
+
 }
 .radioButtonsWrapper {
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: start;
-padding-left: 25%;
+align-items: center;
 }
+}
+.FormRadioButtons {
+    display: flex
+;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
+}
+@media(min-width:1024px){
+    .FormRadioButtons{
+        padding-left: 12%;
+    }
+    .textTitle{
+        padding-top: 140px;
+    }
 }

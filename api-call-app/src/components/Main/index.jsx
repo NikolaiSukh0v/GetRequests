@@ -8,7 +8,7 @@ import './index.scss'
 export default function Main() {
   const [showMore, setShowMore] = useState(6)
   const [refreshTrigger, setRefreshTrigger] = useState(0)
-
+  const [totalPages, setTotalPages] = useState(null)
   const handleClick = () => {
     setShowMore(prev => prev + 6)
   }
@@ -19,11 +19,13 @@ export default function Main() {
 
   const handleUpdate = (e) => {
     if (e === true) {
-      console.log('Triggering update')
+      setShowMore(6)
       update()
     }
   }
-
+  const handlePagesLoaded = (pages) => {
+    setTotalPages(pages)
+  }
   return (
     <>
       <div className="Main">
@@ -35,7 +37,10 @@ export default function Main() {
             <CardBlock show={showMore} update={refreshTrigger} />
           </div>
           <div className="buttonShowMore">
-            <ButtonYellow onClick={handleClick}>Show more</ButtonYellow>
+                 <ButtonYellow
+              onClick={handleClick}
+              isDisabled={totalPages === 1}
+            >Show more</ButtonYellow>
           </div>
         </div>
       </div>

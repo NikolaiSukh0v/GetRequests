@@ -3,6 +3,7 @@ import Input from '../../Common/Input';
 import Uploader from '../../Common/Uploader';
 import ButtonYellow from '../../Common/ButtonYellow';
 import CheckBoxes from '../../Common/CheckBoxes';
+import ErrorNotify from '../../Common/ErrorNotify';
 import './index.scss'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
@@ -18,6 +19,7 @@ export default function Form({isUpdate}) {
     const [phone, setPhone] = useState('')
     const [position, setPosition] = useState('')
     const [error, setError] = useState('')
+    const [notifyError, setNotifyError] = useState('')
     const [photo, setPhoto] = useState(null);
     const [photoError, setPhotoError] = useState('');
     const [fileName, setFileName] = useState('');
@@ -69,6 +71,7 @@ const handlePhotoChange = (file) => {
         if(e===''){
         setMail(val)
         console.log(val, 'mail');
+        setError('')
         }else {
             setError(e),
             console.log(e,'error during entaring mail');
@@ -77,7 +80,8 @@ const handlePhotoChange = (file) => {
 
     }
 const postNewUser = async () => {
-    try {
+    if(!error){
+ try {
         const formData = new FormData();
         formData.append('name', name);
         formData.append('email', mail);
@@ -105,10 +109,15 @@ const postNewUser = async () => {
     } catch (error) {
         console.error('POST request failed:', error.response?.data || error.message);
     }
+    }else {
+        setNotifyError('error')
+    }
+   
 };
         const handleName = (val, e) =>{
         if(e===''){
         setName(val)
+            setError('')
         console.log(val, 'name');
         }else {
             setError(e),
@@ -120,6 +129,7 @@ const postNewUser = async () => {
             const handlePhone = (val, e) =>{
         if(e===''){
         setPhone(val)
+            setError('')
         console.log(val, 'name');
         }else {
             setError(e),
@@ -140,7 +150,12 @@ const postNewUser = async () => {
 
   return (
     <>
+    
       <div className='formWrapper'>
+          {notifyError && (
+                <ErrorNotify message={error} onClose={() => setNotifyError(null)} />
+      )}
+
         <div className='textTitle'>
           <TextTitle  children='Working with POST request'></TextTitle>
         </div>
@@ -154,11 +169,15 @@ const postNewUser = async () => {
       
         </div>
         <div className='radioButtonsWrapper'>
-          <h3 className='TitlePositionSelect'>Select your position</h3>
+
+          <div className='FormRadioButtons'>
+                      <h3 className='TitlePositionSelect'>Select your position</h3>
     <CheckBoxes getValue={radioButton} name='Frontend developer'/>
 <CheckBoxes getValue={radioButton} name='Backend developer'/>
 <CheckBoxes getValue={radioButton} name='Designer'/>
 <CheckBoxes getValue={radioButton} name='QA'/>
+          </div>
+
         </div>
         <div className='uploaderWrapper'>
           <Uploader
@@ -168,7 +187,7 @@ const postNewUser = async () => {
                     />
         </div>
         <div className='ButtonWrapperForm'>
-          <ButtonYellow onClick={postNewUser} children="Sign up" />
+          <ButtonYellow onClick={postNewUser}  children="Sign up" />
         </div>
       </div>
     </>

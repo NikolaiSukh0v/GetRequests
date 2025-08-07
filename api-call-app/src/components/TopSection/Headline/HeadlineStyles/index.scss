@@ -108,3 +108,18 @@
         padding-top: 35px;
     }
 }
+@media(min-width:1023){
+    .TopSectionHeadline{
+        width:380px;
+    }
+}
+@media(min-width:1024px){
+    .headline{
+        height: 650px;
+    }
+    .TopSectionHeadline{
+                padding-top: 170px;
+
+    }
+
+}

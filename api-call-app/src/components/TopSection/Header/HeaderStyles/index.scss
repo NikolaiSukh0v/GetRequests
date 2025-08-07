@@ -8,8 +8,11 @@
     
     gap: 15px;
 }
-.logo {
-    display: block;
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88%;
 }
 .header-Buttons {
     display: flex;
@@ -21,17 +24,9 @@
     background-color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
     
     gap: 15px;
-
-}
-.header-Buttons {
-    display: flex;
-    gap: 10px;
-    padding-right: 30px;
-}.logo {
-    display: block;
-    padding-left: 15px;
 }
 }
